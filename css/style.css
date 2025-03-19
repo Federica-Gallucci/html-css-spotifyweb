@@ -25,7 +25,7 @@ ul {
 
 :root {
   --player-height: 90px;
-  --siderbar-width: 80px;
+  --siderbar-width: 50px;
   --main-content-header-height: 100px;
 }
 
@@ -95,6 +95,8 @@ ul {
   color: black;
 }
 
+/*  */
+
 .wrapper {
   width: 100vw;
 
@@ -113,10 +115,28 @@ ul {
   background-color: #282828;
 }
 
+/* #SIDERBAR */
+
 #siderbar {
   width: var(--siderbar-width);
   background-color: black;
+  color: white;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-weight: 20px;
+}
+
+#siderbar .siderbar-top .none {
+  display: none;
+}
+#siderbar img {
+  width: 40%;
+}
+
+#siderbar .spotify {
 }
 
 #main-content {
@@ -125,7 +145,7 @@ ul {
 
 #main-content-header {
   height: var(--main-content-header-height);
-  background-color: #00000022;
+  background-color: #080b12;
 }
 
 #content {
@@ -140,3 +160,41 @@ ul {
 /* MAIN */
 
 /* FOOTER */
+
+/************************************************
+               RESPONSIVE
+
+ ************************************************/
+
+/* SMALL */
+@media screen and (min-width: 576px) {
+  :root {
+    --siderbar-width: 200px;
+  }
+
+  .logo-xs {
+    display: none;
+  }
+
+  #siderbar .siderbar-top .none {
+    display: inline;
+  }
+
+  #siderbar .siderbar-top .logo-s img {
+    width: 60%;
+  }
+
+  #siderbar .siderbar-top .menu img {
+    width: 10%;
+  }
+}
+
+/* MEDIUM */
+
+@media screen and (min-width: 768px) {
+}
+
+/* LARGE */
+
+@media screen and (min-width: 992px) {
+}
