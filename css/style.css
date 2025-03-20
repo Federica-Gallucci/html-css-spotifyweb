@@ -115,7 +115,7 @@ ul {
   background-color: #282828;
 }
 
-/* #SIDERBAR */
+/* #SIDERBAR-TOP */
 
 #siderbar {
   width: var(--siderbar-width);
@@ -129,15 +129,60 @@ ul {
   font-weight: 20px;
 }
 
-#siderbar .siderbar-top .none {
+#siderbar .none {
   display: none;
 }
 #siderbar img {
-  width: 40%;
+  width: 50%;
 }
 
-#siderbar .spotify {
+#siderbar .siderbar-top {
+  line-height: 2;
+  padding-left: 10px;
+  padding-top: 10px;
 }
+#siderbar .siderbar-top li {
+  line-height: 2;
+}
+
+#siderbar .siderbar-top ul,
+#siderbar .siderbar-top .search,
+#siderbar .siderbar-top .bookshelf {
+  color: #5e5e5e;
+}
+/* SIDERBAR-BOTTOM */
+#siderbar .install,
+#siderbar .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#siderbar .install {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#siderbar .install-text,
+#siderbar .profile-name {
+  display: none;
+}
+
+#siderbar .profile-pic-container {
+  width: 25px;
+  height: 25px;
+  background-color: gray;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#siderbar .profile-pic-container img {
+  width: 20px;
+}
+
+/* #MAIN-CONTENT */
 
 #main-content {
   width: calc(100% - var(--siderbar-width));
@@ -176,7 +221,7 @@ ul {
     display: none;
   }
 
-  #siderbar .siderbar-top .none {
+  #siderbar .none {
     display: inline;
   }
 
@@ -184,8 +229,21 @@ ul {
     width: 60%;
   }
 
-  #siderbar .siderbar-top .menu img {
+  #siderbar img {
     width: 10%;
+  }
+
+  /* SIDERBAR-BOTTOM */
+
+  #siderbar .install-text,
+  #siderbar .profile-name {
+    display: block;
+  }
+
+  #siderbar .install {
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid gray;
+    margin-bottom: 0.8rem;
   }
 }
 
