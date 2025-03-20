@@ -150,12 +150,28 @@ ul {
 #siderbar .siderbar-top .bookshelf {
   color: #5e5e5e;
 }
+#siderbar .crea-playlist {
+  display: flex;
+  gap: 0.3rem;
+}
+
+#siderbar .playlist .square {
+  height: 30px;
+  width: 30px;
+  background-color: gray;
+  color: #080b12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
 /* SIDERBAR-BOTTOM */
 #siderbar .install,
 #siderbar .profile {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.3rem;
 }
 
 #siderbar .install {
