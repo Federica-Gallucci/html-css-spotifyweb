@@ -263,6 +263,17 @@ ul {
   padding: 0 10px;
 }
 
+#player .player-left,
+#player .player-center,
+#player .player-right {
+  flex: 1 1 0px;
+}
+
+#player .player-left,
+#player .player-right {
+  max-width: 250px;
+}
+
 #player p {
   color: #5e5e5e;
 }
@@ -282,32 +293,58 @@ ul {
 }
 
 #player .player-center {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
+  max-width: 450px;
+}
 
-  gap: 30px;
+#player .player-center-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #player .player-center-down {
   display: flex;
-  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 #player .player-center-down .bar-time {
-  width: 100px;
+  flex-grow: 1;
+  height: 4px;
 
   border-radius: 15px;
   background-color: #5e5e5e;
+  max-width: 70%;
 }
 
 #player .bar-time-rest {
-  width: 30px;
-  height: 9px;
+  width: 30%;
+  height: 100%;
 
   border-radius: 15px;
   background-color: white;
+  position: relative;
+}
+
+#player .player-center-down .bar-time > .bar-time-rest > .ball {
+  background-color: white;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  display: none;
+}
+
+#player .player-center-down .bar-time:hover > .bar-time-rest > .ball {
+  display: block;
+}
+
+#player .player-center-down .bar-time:hover > .bar-time-rest {
+  background-color: lime;
 }
 
 #player ul {
@@ -381,16 +418,16 @@ ul {
     margin-bottom: 0.8rem;
   }
 
-  #player .player-center-down .bar-time {
-    width: 130x;
-  }
-
   #siderbar .install,
   #siderbar .profile {
     justify-content: flex-start;
   }
   #siderbar .profile {
     padding-left: 10px;
+  }
+
+  #player .player-center {
+    flex: 2 1 0px;
   }
 }
 
@@ -404,16 +441,9 @@ ul {
   #player .player-left {
     gap: 1rem;
   }
-
-  #player .player-center-down .bar-time {
-    width: 130x;
-  }
 }
 
 /* LARGE */
 
 @media screen and (min-width: 992px) {
-  #player .player-center-down .bar-time {
-    width: 300x;
-  }
 }
