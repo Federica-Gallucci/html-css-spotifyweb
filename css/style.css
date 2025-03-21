@@ -342,6 +342,13 @@ ul {
   font-size: 4rem;
 }
 
+#main-content #content .circle {
+  background-color: transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
 /* # PLAYER */
 
 #player {
