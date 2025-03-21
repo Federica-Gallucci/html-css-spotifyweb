@@ -281,6 +281,30 @@ ul {
   color: white;
 }
 
+/*  
+#main-content #content .link-list .link-list-line {
+  width: 10px;
+  height: 2px;
+  color: lime;
+}
+  */
+
+#main-content #content h3 {
+  color: white;
+}
+
+#main-content #content p {
+  color: #727479;
+}
+
+/* far andare a capo in base allo spazio a disposizione */
+
+#main-content #content .song {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
 /* # PLAYER */
 
 #player {
