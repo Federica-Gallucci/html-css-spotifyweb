@@ -83,10 +83,6 @@ ul {
   width: calc(100% / 6);
 }
 
-.card {
-  border: 1px solid black;
-  padding: 10px;
-}
 .btn {
   display: inline-block;
   padding: 3px 6px;
@@ -256,6 +252,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 10px;
 }
 
 #main-content .button-upgrade {
@@ -289,7 +286,8 @@ ul {
 }
   */
 
-#main-content #content h3 {
+#main-content #content h3,
+#main-content #content h4 {
   color: white;
 }
 
@@ -302,7 +300,46 @@ ul {
 #main-content #content .song {
   display: flex;
   flex-wrap: wrap;
+}
+#main-content #content .recent,
+#main-content #content .create,
+#main-content #content .popular {
   padding: 10px 20px;
+}
+
+.size-col {
+  width: calc(100% / 2);
+  padding: 10px;
+}
+
+#main-content #content .information {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+#main-content #content .card-hover {
+  display: none;
+}
+
+#main-content #content .card {
+  position: relative;
+  cursor: pointer;
+}
+
+#main-content #content .card:hover .card-hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000077;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4rem;
 }
 
 /* # PLAYER */
@@ -494,9 +531,15 @@ ul {
   #player .player-left {
     gap: 1rem;
   }
+  .size-col {
+    width: calc(100% / 4);
+  }
 }
 
 /* LARGE */
 
 @media screen and (min-width: 992px) {
+  .size-col {
+    width: calc(100% / 6);
+  }
 }
