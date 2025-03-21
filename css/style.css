@@ -252,6 +252,20 @@ ul {
   overflow: auto;
 }
 
+#main-content #main-content-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#main-content .button-upgrade {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
 /* # PLAYER */
 
 #player {
