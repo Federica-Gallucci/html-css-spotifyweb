@@ -115,7 +115,7 @@ ul {
   background-color: #282828;
 }
 
-/* #SIDERBAR-TOP */
+/* #SIDERBAR */
 
 #siderbar {
   width: var(--siderbar-width);
@@ -125,6 +125,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 10px;
 
   font-weight: 20px;
 }
@@ -136,23 +137,46 @@ ul {
   width: 50%;
 }
 
+/* SIDERBAR-TOP */
+
 #siderbar .siderbar-top {
   line-height: 2;
-  padding-left: 10px;
+
   padding-top: 10px;
 }
 #siderbar .siderbar-top li {
   line-height: 2;
 }
 
+#siderbar .spotify {
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+#siderbar .home,
+#siderbar .search,
+#siderbar .bookshelf {
+  padding-left: 10px;
+}
+#siderbar .playlist .title,
+#siderbar .crea-playlist,
+#siderbar .playlist ul {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#siderbar .bookshelf {
+  padding-bottom: 10px;
+}
 #siderbar .siderbar-top ul,
 #siderbar .siderbar-top .search,
-#siderbar .siderbar-top .bookshelf {
+#siderbar .siderbar-top .bookshelf,
+#siderbar .siderbar-bottom .install-text {
   color: #5e5e5e;
 }
 #siderbar .crea-playlist {
   display: flex;
   gap: 0.3rem;
+  color: #5e5e5e;
 }
 
 #siderbar .playlist .square {
@@ -165,6 +189,14 @@ ul {
   align-items: center;
   font-size: 1.5rem;
 }
+
+#siderbar .search:hover,
+#siderbar .bookshelf:hover,
+#siderbar .crea-playlist:hover,
+#siderbar .siderbar-top ul li:hover {
+  color: white;
+}
+
 /* SIDERBAR-BOTTOM */
 #siderbar .install,
 #siderbar .profile {
@@ -177,6 +209,10 @@ ul {
 #siderbar .install {
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+#siderbar .install img {
+  width: 12px;
 }
 
 #siderbar .install-text,
@@ -261,7 +297,7 @@ ul {
 
 #player .player-center-down .bar-time {
   width: 100px;
-  border: 1px solid #5e5e5e;
+
   border-radius: 15px;
   background-color: #5e5e5e;
 }
@@ -287,7 +323,6 @@ ul {
 #player .bar-volume {
   width: 100px;
 
-  border: 1px solid #5e5e5e;
   border-radius: 15px;
   background-color: #5e5e5e;
 }
@@ -326,6 +361,10 @@ ul {
   #siderbar img {
     width: 10%;
   }
+  #siderbar .home {
+    border-left: 1px solid greenyellow;
+    padding-left: 8px;
+  }
 
   /* SIDERBAR-BOTTOM */
 
@@ -336,12 +375,22 @@ ul {
 
   #siderbar .install {
     padding-bottom: 0.8rem;
+    margin: 0 10px;
+
     border-bottom: 1px solid gray;
     margin-bottom: 0.8rem;
   }
 
   #player .player-center-down .bar-time {
     width: 130x;
+  }
+
+  #siderbar .install,
+  #siderbar .profile {
+    justify-content: flex-start;
+  }
+  #siderbar .profile {
+    padding-left: 10px;
   }
 }
 
